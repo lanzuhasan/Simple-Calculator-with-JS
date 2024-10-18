@@ -1,0 +1,60 @@
+$primaryColor: rgb(72, 72, 74);
+$bgColor: rgba(229, 229, 234);
+$textColor: rgb(242, 242, 247);
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: $bgColor;
+}
+.calculator {
+  width: 300px;
+  height: auto;
+  background: $primaryColor;
+  margin: 8% auto;
+  padding: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px 0 $primaryColor;
+  .theResult {
+    width: 100%;
+    background: darken($primaryColor, 3%);
+    border: none;
+    padding: 10px;
+    padding-top: 18px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 600;
+    color: $textColor;
+    border-radius: 4px;
+    &:focus {
+      outline: none;
+    }
+  }
+  table {
+    width: 100%;
+    tr {
+      td {
+        width: 25%;
+        input[type="button"] {
+          background: darken($primaryColor, 3%);
+          width: 100%;
+          max-width: 73px;
+          height: 73px;
+          border: none;
+          font-size: 28px;
+          border-radius: 4px;
+          color: $textColor;
+          &:hover {
+            background: darken($primaryColor, 5%);
+          }
+        }
+      }
+    }
+  }
+}
